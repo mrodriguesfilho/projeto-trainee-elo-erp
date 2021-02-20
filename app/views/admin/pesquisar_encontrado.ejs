@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Elo Jr | Resultado</title>
+</head>
+
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="/elo.png" alt="">
+        </div>
+        <ul class ="nav-area">
+            <li><a href="/"> Home</a></li>
+            <li><a href="/pesquisar"> Consultar usuario</a></li>
+    </div>
+
+    <div class="welcome-text">
+        <h1> RESULTADO</h1>
+
+        <div class="resultados">
+            <div>
+                <div class="tab"><li>NOME: <%= pessoas[0].nome %></li></div>
+                <div class="tab"><li>DATA DE NASCIMENTO: <%= pessoas[0].dataDeNascimento.getDate()%> / <%= pessoas[0].dataDeNascimento.getMonth()+1%>/ <%= pessoas[0].dataDeNascimento.getFullYear()%></li></div>
+                <div class="tab"><li>CARGO: <%= pessoas[0].cargo %></li></div>
+                <div class="tab"><li>MATRICULA UFG: <%= pessoas[0].matriculaufg %></li></div>
+                <div class="tab"><li>CURSO: <%= pessoas[0].curso %></li></div>
+                <div class="tab"><li>NÚCLEO: <%= pessoas[0].nucleo %></li></div>
+                <div class="tab"><li>CPF: <%= pessoas[0].cpf %></li></div>
+                <div class="tab"><li>RG: <%= pessoas[0].rg %></li></div>
+                <div class="tab"><li>TELEFONE:<%= pessoas[0].telefone %></li></div>
+                <div class="tab"><li>DATA DE ENTRADA: <%= pessoas[0].dataEntrada.getDate()%> / <%= pessoas[0].dataEntrada.getMonth()+1%>/ <%= pessoas[0].dataEntrada.getFullYear()%></li></div>
+                <div class="tab"><li>E-MAIL ELO: <%= pessoas[0].emailElo %></li></div>
+                <div class="tab"><li>E-MAIL PESSOAL: <%= pessoas[0].emailPessoal %></li></div>
+                <div class="tab"><li>ENDEREÇO: <%= pessoas[0].endereco %></li></div>
+
+            </ul>
+
+            <form action="/pesquisar/deletar" method="post" class="delete">
+                <button id="delete" type="delete">Deletar Lobo</button>
+                <input id="cpf" type="text" name="cpf" pattern="\d*" value= "<%= pessoas[0].cpf %>" minlength="11" maxlength="11"  hidden readonly>
+            </form>
+        </div>
+
+    </div>
+
+</header>
+</body>
+</html>
+
+<style type="text/css">
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    .wrapper{
+        width: 1170px;
+        margin:auto;
+    }
+
+    header{
+        background: #314C75;
+        height: 100vh;
+        -webkit-background-size:cover;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+
+    }
+    .nav-area{
+        float: right;
+        list-style: none;
+        margin-top: 50px;
+    }
+    .nav-area li{
+        margin-top: 25px;
+        display: inline-block;
+    }
+    .nav-area li a{
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 5px 20px;
+        font-family: poppings;
+        font-size: 16px;
+    }
+    .nav-area li a:hover{
+        background: #fff;
+        color: #333;
+    }
+    .logo img{
+        width: 250px;
+        float: left;
+        margin-left: -20px;
+        margin-top : -60px;
+    }
+
+    .welcome-text{
+        position: absolute;
+        width: 300px;
+        margin: 25% 30%;
+        text-align: center;
+    }
+    .resultados{
+        text-align: left;
+        background: #fff;
+        font-size: 15px;
+        width: 350px;
+        position: absolute;
+        margin: 2% 40%;
+        list-style: none;
+    }
+    .tab{
+        margin-left:5px;
+        margin-top: 6px;
+    }
+    .welcome-text h1{
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        margin-top: -250px;
+        font-size: 100px;
+    }
+    ul{
+        list-style-type: none;
+    }
+    #delete{
+        width: 120px;
+        height: 25px;
+        position: absolute;
+        margin: 2% 30% ;
+
+    }
+</style>

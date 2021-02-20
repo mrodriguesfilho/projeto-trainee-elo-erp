@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Elo Jr | Pesquisar novamente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+   <header>
+       <div class="wrapper">
+           <div class="logo">
+               <img src="/elo.png" alt="">
+           </div>
+           <ul class ="nav-area">
+               <li><a href="/"> Home</a></li>
+               <li><a href="/pesquisar"> Cadastrar usuario</a></li>
+       </div>
+
+       <div class="welcome-text">
+       	    <h2>Erro! </h2>
+       		<h2>CPF não encontrado.</h2>
+           	<h2 id="phrase"> Consulta </h2>
+       </div>
+
+      <div class="consulta">
+
+          <form action="#" method="post">
+
+              <input id="cpf" type="text" name="cpf" pattern="\d*" minlength="11" maxlength="11" placeholder="Pesquisar CPF" required>
+              <button id="pesquisa" type="submit"><i class="fa fa-search"></i></button>
+
+          </form>
+
+      </div>
+
+   </header>	     
+</body>
+</html>
+
+<style type="text/css">
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    .wrapper{
+        width: 1170px;
+        margin:auto;
+    }
+
+    header{
+        background: #314C75;
+        height: 100vh;
+        -webkit-background-size:cover;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+
+    }
+    .nav-area{
+        float: right;
+        list-style: none;
+        margin-top: 50px;
+    }
+    .nav-area li{
+        margin-top: 25px;
+        display: inline-block;
+    }
+    .nav-area li a{
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 5px 20px;
+        font-family: poppings;
+        font-size: 16px;
+    }
+    .nav-area li a:hover{
+        background: #fff;
+        color: #333;
+    }
+    .logo img{
+        width: 250px;
+        float: left;
+        margin-left: -20px;
+        margin-top : -60px;
+    }
+	.welcome-text{
+	   position: absolute;
+	   width: 600px;
+	   margin: 13% 30%;
+	   text-align: center;
+	}
+
+	.welcome-text h2{
+	   text-align: center;
+	   color: #fff;
+	   text-transform: uppercase;
+	   font-size: 40px;
+	}
+    #cpf{
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 350px;
+        background: #f1f1f1;
+    }
+    #pesquisa{
+        float: left;
+        width: 50px;
+        height: 42px;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 15px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+    }
+
+    #pesquisa:hover{
+        background: #0b7dda;
+    }
+
+    .consulta{
+        position:absolute;
+        margin: 25% 36%;
+    }
+
+    #phrase{
+	  margin-top: 25px;
+	}
+
+</style>
